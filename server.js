@@ -14,16 +14,22 @@ const kitchenNotificationRouter = require("./router/kitchennotifirouter");
 const foodorderRouter = require("./router/foodorderRouter");
 const billRouter = require("./router/billrouter");
 
-dns.setServers(["1.1.1.1", "1.0.0.1"]);1
+dns.setServers(["1.1.1.1", "1.0.0.1"]);
+1;
 dotenv.config();
 connectDb();
-
 
 const app = express();
 
 app.use(
   cors({
-    origin: process.env.CLIENT_URL || "http://localhost:5173",
+    origin: [
+      "http://localhost:5173",
+      "http://localhost:5000",
+      "http://localhost:5001",
+      "https://jerry-restaurant.vercel.app/",
+      "https://restaurant-backend-tttl.onrender.com",
+    ],
     credentials: true,
   }),
 );
