@@ -6,9 +6,7 @@ const TableBooking = require("../model/tablebookingmodel");
 const KitchenNotification = require("../model/kitchennotifimodel");
 const sendOrderEmail = require("../units/sendEmail");
 
-// ─────────────────────────────────────────────
-//  PLACE ORDER (User / Customer)
-// ─────────────────────────────────────────────
+
 const placeOrder = async (req, res) => {
   try {
     const {
@@ -135,9 +133,7 @@ const placeOrder = async (req, res) => {
   }
 };
 
-// ─────────────────────────────────────────────
-//  GET ALL ORDERS (Admin / Delivery)
-// ─────────────────────────────────────────────
+
 const getAllOrders = async (req, res) => {
   try {
     const orders = await Order.find()
@@ -162,9 +158,6 @@ const getAllOrders = async (req, res) => {
   }
 };
 
-// ─────────────────────────────────────────────
-//  GET USER ORDERS (Authenticated user only)
-// ─────────────────────────────────────────────
 const getUserOrders = async (req, res) => {
   try {
     const orders = await Order.find({ userId: req.userId })
@@ -188,9 +181,7 @@ const getUserOrders = async (req, res) => {
   }
 };
 
-// ─────────────────────────────────────────────
-//  GET DELIVERY ORDERS (For delivery person)
-// ─────────────────────────────────────────────
+
 const getDeliveryOrders = async (req, res) => {
   try {
     const { status } = req.query;
@@ -227,9 +218,7 @@ const getDeliveryOrders = async (req, res) => {
   }
 };
 
-// ─────────────────────────────────────────────
-//  GET SINGLE ORDER (With full details)
-// ─────────────────────────────────────────────
+
 const getOrderById = async (req, res) => {
   try {
     const { id } = req.params;
