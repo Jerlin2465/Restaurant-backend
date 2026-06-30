@@ -13,7 +13,7 @@ const {
   cancelOrder,
   returnOrder,
   deleteOrder,
-} = require("../controller/orderController");
+} = require("../controller/ordercontroller");
 
 
 router.post("/place-order", auth, placeOrder);
