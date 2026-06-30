@@ -9,12 +9,12 @@ const productRouter = require("./router/productRouter");
 const orderRouter = require("./router/orderRouter");
 const cartRouter = require("./router/cartRouter");
 const paymentRouter = require("./router/paymentRouter");
-const tableBookingRouter = require("./router/tableBookingRouter");
+const tableBookingRouter = require("./router/tablebookingrouter");
 const kitchenNotificationRouter = require("./router/kitchennotifirouter");
 const foodorderRouter = require("./router/foodorderRouter");
 const billRouter = require("./router/billrouter");
 
-dns.setServers(["1.1.1.1", "1.0.0.1"]);
+dns.setServers(["1.1.1.1", "1.0.0.1"]);1
 dotenv.config();
 connectDb();
 
