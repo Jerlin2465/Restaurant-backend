@@ -46,6 +46,10 @@ app.use("/table", tableBookingRouter);
 app.use("/food", foodorderRouter);
 app.use("/bill", billRouter);
 
+app.get("/", (req, res) => {
+  res.send("Restaurant Backend is running...");
+});
+
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, "0.0.0.0", () => {
