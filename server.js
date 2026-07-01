@@ -28,7 +28,7 @@ app.use(
       "http://localhost:5000",
       "http://localhost:5001",
       "https://jerry-restaurant.vercel.app",
-      "https://restaurant-backend-tttl.onrender.com",
+      "https://restaurant-backend-603a.onrender.com",
     ],
     credentials: true,
   }),
