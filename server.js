@@ -35,7 +35,9 @@ app.use(
 );
 app.use(express.json());
 app.use("/uploads", express.static("uploads"));
-
+app.get("/", (req, res) => {
+  res.send("Backend running successfully");
+});
 app.use("/api", register);
 app.use("/product", productRouter);
 app.use("/order", orderRouter);
